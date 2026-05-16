@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --app-height: 100vh;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: var(--app-height);
+  overflow: hidden;
+  background: #ecebe6;
+  font-family: var(--font-sans);
+  touch-action: none;
+}
+
+#root {
+  height: 100%;
+}
+
+.node-shadow {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.dragging {
+  opacity: 0.8;
+  scale: 1.05;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  z-index: 1000;
+  cursor: grabbing;
+}
+
+.node-menu-item {
+  @apply bg-zinc-700 hover:bg-zinc-600 text-white px-3 py-2 rounded-lg font-bold text-sm transition-colors;
+}
